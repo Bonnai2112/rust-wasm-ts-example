@@ -1,0 +1,36 @@
+[package]
+name = "key-and-transactions-manager"
+version = "0.0.1"
+description = "Keys and transaction manager code in Rust and use in Typescript"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+console_error_panic_hook = "0.1.6"
+wasm-bindgen = { version = "0.2.79", features = ["serde-serialize"] }
+web3-keystore = "0.4"
+rand = "0.8"
+getrandom = {version = "0.2", features = ["js"]}
+serde = {version = "1", features = ["derive"]}
+serde_json = "1"
+thiserror = "1"
+curv-kzen = {version = "0.9", features = ["num-bigint"], default-features = false}
+log = "0.4"
+wasm-log = "0.3"
+hex = "0.4"
+
+[dependencies.paillier]
+version = "0.4.2"
+package = "kzen-paillier"
+default-features = false
+
+[dependencies.multi-party-ecdsa]
+git = "https://github.com/ZenGo-X/multi-party-ecdsa"
+tag = "v0.7.1"
+#branch = "master"
+
+[dependencies.web3-core]
+git = "https://github.com/tmpfs/web3-core"
+branch = "main"
+
