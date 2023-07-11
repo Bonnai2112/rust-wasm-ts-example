@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  wasm:
+    build: .
+    volumes:
+      - .:/usr/app
