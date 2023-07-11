@@ -22,6 +22,6 @@ RUN rustup default stable
 RUN cargo install --version 0.10.3 wasm-pack
 
 # WASM
-RUN rustup override set nightly
-RUN rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
-RUN wasm-pack build --target web --scope bonnai
+#RUN rustup override set nightly
+#RUN rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
+#RUN wasm-pack build --target web --scope bonnai
